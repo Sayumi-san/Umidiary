@@ -3,7 +3,7 @@
     <div class="title box">
         <h2>「<?php the_search_query(); ?>」の検索結果</h2>
     </div>
-    <div class="latest-articles">
+    <div class="latest-articles-category">
         <?php if (have_posts() && get_search_query()): ?>
             <?php while (have_posts()):
                 the_post(); ?>
@@ -18,3 +18,4 @@
         <?php endif; ?>
     </div>
 </main>
+<?php get_footer(); ?>

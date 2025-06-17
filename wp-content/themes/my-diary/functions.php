@@ -1,12 +1,9 @@
 <?php
 function my_theme_setup()
 {
-  // 初期設定の関数定義
   add_theme_support('post-thumbnails');
-  // アイキャッチ機能を有効化
 }
 add_action('after_setup_theme', 'my_theme_setup');
-//   テーマのセットアップ時に関数を実行
 ?>
 
 <?php

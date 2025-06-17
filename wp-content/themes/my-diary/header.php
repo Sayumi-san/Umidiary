@@ -23,137 +23,107 @@
   <div class="container">
     <header>
       <nav class="navbar">
-        <div class="menu-container hoverchange">
-          <a href=" <?php echo home_url(); ?> ">
-            <div class="indextab">
-              <h1>Umi's Diary</h1>
-            </div>
-          </a>
-        </div>
-        <ul class="menu">
-          <li class="centered">
-            <div class="menu-container hoverchange">
-              <?php
-              $category_link = get_category_link(get_category_by_slug('life-before-in-van')->term_id);
-              ?>
-              <a href="<?php echo esc_url($category_link); ?>">
-                <div class="indextab">
-                  <h2>Life before in Van</h2>
-                </div>
-              </a>
-            </div>
-          </li>
-          <li class="centered showdropdownmenu hoverchange">
-            <div class="menu-container">
+        <div class="container-container">
+
+          <div class="menu-container hoverchange">
+            <a href=" <?php echo home_url(); ?> ">
               <div class="indextab">
-                <h2>Life in Van</h2>
+                <h1>Umi's Diary</h1>
               </div>
-              <div class="dropdownmenu">
-                <ul>
-                  <li><?php
-                  $category_link = get_category_link(get_category_by_slug('work')->term_id);
-                  ?><a href="<?php echo esc_url($category_link); ?>">Work</a></li>
-                  <li><?php
-                  $category_link = get_category_link(get_category_by_slug('study')->term_id);
-                  ?><a href="<?php echo esc_url($category_link); ?>">Study</a></li>
-                  <li><?php
-                  $category_link = get_category_link(get_category_by_slug('recommendation')->term_id);
-                  ?><a href="<?php echo esc_url($category_link); ?>">Recommendation</a></li>
-                  <li> <?php
-                  $category_link = get_category_link(get_category_by_slug('diary')->term_id);
-                  ?><a href="<?php echo esc_url($category_link); ?>">Diary</a></li>
-                </ul>
+            </a>
+          </div>
+          <ul class="menu">
+            <li>
+              <div class="menu-container hoverchange">
+                <?php
+                $category_link = get_category_link(get_category_by_slug('life-before-in-van')->term_id);
+                ?>
+                <a href="<?php echo esc_url($category_link); ?>">
+                  <div class="indextab">
+                    <h2>Life before in Van</h2>
+                  </div>
+                </a>
               </div>
-            </div>
-          </li>
-          <?php get_search_form(); ?>
-        </ul>
-        <input type="checkbox" id="menu-btn-check">
-        <label for="menu-btn-check" class="menu-btn hamburger-menu">
-        </label>
-        <div class="overlay" id="overlay"></div>
-        <div id="navigation">
-          <ul>
-            <li class="top-part-of-bookmark"><img
-                src="<?php echo get_theme_file_uri('images/Top-part-of-bookmark.png'); ?>" alt="Bookmark"></li>
-            <li class="top-part"><a href="<?php echo esc_url($category_link); ?>">Life before in Van</a></li>
-            <div class="middle-section">
-              <li class="middle-part">Life in Van</li>
-              <li class="middle-min-part"><?php
-              $category_link = get_category_link(get_category_by_slug('work')->term_id);
-              ?><a href="<?php echo esc_url($category_link); ?>"><img
-                    src="<?php echo get_theme_file_uri('images/Rectangle.png'); ?>" alt="Rectangle">Work</a></li>
-              <li class="middle-min-part"><?php
-              $category_link = get_category_link(get_category_by_slug('study')->term_id);
-              ?><a href="<?php echo esc_url($category_link); ?>"><img
-                    src="<?php echo get_theme_file_uri('images/Rectangle.png'); ?>" alt="Rectangle">Study</a></li>
-              <li class="middle-min-part"><?php
-              $category_link = get_category_link(get_category_by_slug('recommendation')->term_id);
-              ?><a href="<?php echo esc_url($category_link); ?>"><img
-                    src="<?php echo get_theme_file_uri('images/Rectangle.png'); ?>" alt="Rectangle">Recommendation</a>
-              </li>
-              <li class="middle-min-part"><?php
-              $category_link = get_category_link(get_category_by_slug('diary')->term_id);
-              ?><a href="<?php echo esc_url($category_link); ?>"><img
-                    src="<?php echo get_theme_file_uri('images/Rectangle.png'); ?>" alt="Rectangle">Diary</a></li>
-            </div>
-            <div class="search-form-button">
-              <?php get_search_form(); ?>
-            </div>
+            </li>
+            <li class="showdropdownmenu hoverchange">
+              <div class="menu-container">
+                <div class="indextab">
+                  <h2>Life in Van</h2>
+                </div>
+                <div class="dropdownmenu">
+                  <ul>
+                    <li><?php
+                    $category_link = get_category_link(get_category_by_slug('work')->term_id);
+                    ?><a href="<?php echo esc_url($category_link); ?>">Work</a></li>
+                    <li><?php
+                    $category_link = get_category_link(get_category_by_slug('study')->term_id);
+                    ?><a href="<?php echo esc_url($category_link); ?>">Study</a></li>
+                    <li><?php
+                    $category_link = get_category_link(get_category_by_slug('recommendation')->term_id);
+                    ?><a href="<?php echo esc_url($category_link); ?>">Recommendation</a></li>
+                    <li> <?php
+                    $category_link = get_category_link(get_category_by_slug('diary')->term_id);
+                    ?><a href="<?php echo esc_url($category_link); ?>">Diary</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <?php get_search_form(); ?>
           </ul>
+          <div class="bookmark-container">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn hamburger-menu">
+            </label>
+            <div class="overlay" id="overlay">
+              <div class="popup-image hidden" id="popupImage">
+                <img src="<?php echo get_theme_file_uri('images/Pop-up.png'); ?>" alt="Popupimage">
+              </div>
+            </div>
+            <div id="navigation">
+              <ul>
+                <li class="top-part-of-bookmark"><img
+                    src="<?php echo get_theme_file_uri('images/Top-part-of-bookmark.png'); ?>" alt="Bookmark"></li>
+                <li class="top-part"><a href="<?php echo esc_url($category_link); ?>">Life before in Van</a></li>
+                <div class="middle-section">
+                  <li class="middle-part">Life in Van</li>
+                  <li class="middle-min-part"><?php
+                  $category_link = get_category_link(get_category_by_slug('work')->term_id);
+                  ?><a href="<?php echo esc_url($category_link); ?>"><img
+                        src="<?php echo get_theme_file_uri('images/Circle.png'); ?>" alt="Circle">Work</a></li>
+                  <li class="middle-min-part"><?php
+                  $category_link = get_category_link(get_category_by_slug('study')->term_id);
+                  ?><a href="<?php echo esc_url($category_link); ?>"><img
+                        src="<?php echo get_theme_file_uri('images/Circle.png'); ?>" alt="Circle">Study</a></li>
+                  <li class="middle-min-part"><?php
+                  $category_link = get_category_link(get_category_by_slug('recommendation')->term_id);
+                  ?><a href="<?php echo esc_url($category_link); ?>"><img
+                        src="<?php echo get_theme_file_uri('images/Circle.png'); ?>" alt="Circle">Recommendation</a>
+                  </li>
+                  <li class="middle-min-part"><?php
+                  $category_link = get_category_link(get_category_by_slug('diary')->term_id);
+                  ?><a href="<?php echo esc_url($category_link); ?>"><img
+                        src="<?php echo get_theme_file_uri('images/Circle.png'); ?>" alt="Circle">Diary</a></li>
+                </div>
+                <li class="search-form-button">
+                  <form action="<?php echo home_url(); ?>" method="get" id="searchFormMobile">
+                    <div class="form-container">
+                      <input type="search" name="s" placeholder="キーワードを入力" class="search-bar" id="searchInput">
+                    </div>
+                    <input type="submit" class="title box" value="search">
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-  </div>
-  </nav>
-  <style>
-    .indextab {
-      width: 200px;
-      height: 70px;
-      background-image: url('<?php echo get_theme_file_uri("images/Nav_tab.png"); ?>');
-      background-size: contain;
-      background-position: bottom;
-      background-repeat: no-repeat, no-repeat;
-    }
-
-    .hamburger-menu {
-      display: none;
-      width: 200px;
-      height: 70px;
-      background-image: url('<?php echo get_theme_file_uri("images/Hamburger-menu.png"); ?>');
-      background-size: contain;
-      background-position: bottom;
-      background-repeat: no-repeat, no-repeat;
-    }
-
-
-    @media only screen and (max-width: 1045px) {
-      .navbar {
-        display: flex;
-        align-items: flex-end;
-      }
-
+      </nav>
+    </header>
+    <style>
       .indextab {
-        width: 150px;
-        height: 53px;
-      }
-
-      .menu {
-        display: none;
+        background-image: url('<?php echo get_theme_file_uri("images/Nav_tab.png"); ?>');
       }
 
       .hamburger-menu {
-        display: block;
-        width: 100px;
-        height: 38px;
+        background-image: url('<?php echo get_theme_file_uri("images/Hamburger-menu.png"); ?>');
       }
-
-      .profile h1,
-      .article h1,
-      .indextab h1 {
-        font-size: var(--h2-size);
-      }
-    }
-
-    /* 外部のCSSファイル（たとえば style.css）に記述している場合、PHPはそのまま解釈されない */
-  </style>
-  </header>
-  <!-- <ul> や <ol> の中に直接入れていいのは <li>（リストアイテム）のみとと、HTMLの仕様で決まってる -->
+    </style>

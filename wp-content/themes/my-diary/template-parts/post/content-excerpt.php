@@ -8,8 +8,9 @@
         </div>
     <?php endif; ?>
 
-    <p>
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </p>
-
+    <a href="<?php the_permalink(); ?>">
+        <div class="article-title-container">
+            <p><?php the_title(); ?></p>
+        </div>
+    </a>
 </article>
