@@ -571,16 +571,17 @@ input[type="search"] {
 }
 #i {
   color: var(--lightgray);
-  font-size: 37px;
+  font-size: 32px;
 }
 .content-title {
   background-color: rgba(166, 184, 156, 0.5);
   color: var(--text-dark-gray);
-  padding: 10px;
+  padding: 12px 10px;
   box-sizing: border-box;
   max-width: 994px;
   margin: 0 auto;
   margin-bottom: 8px;
+  border-radius: 20px;
 }
 .wp-block-cover {
   display: block;
@@ -620,6 +621,10 @@ html body #toc_container {
 p {
   line-height: 1.6;
 }
+#toc_container {
+  font-size: var(--p-small-size);
+}
+
 .post-explanation a,
 .highlight a {
   position: relative;
@@ -699,6 +704,7 @@ p {
 .footer ul li a {
   color: var(--text-dark-gray);
   font-family: var(--body-font);
+  width: auto;
 }
 .footer ul li {
   min-width: 90px;
@@ -848,7 +854,7 @@ p {
   }
   .footer ul li p,
   .footer ul li a {
-    line-height: 40px;
+    line-height: 20px;
   }
   .picture-container img {
     width: 200px;
@@ -896,6 +902,12 @@ p {
   .wp-block-heading {
     font-size: var(--h3-size);
   }
+  #toc_container,
+  #toc_container p,
+  #toc_container li,
+  #toc_container a {
+    font-size: var(--p-small-size) !important;
+  }
   .latest-post-item {
     flex: 0 0 202px;
     margin: 20px;
@@ -927,6 +939,9 @@ p {
   }
   .popup-image img {
     width: 300px;
+  }
+  #i {
+    font-size: 28px;
   }
 }
 @media only screen and (max-width: 578px) {

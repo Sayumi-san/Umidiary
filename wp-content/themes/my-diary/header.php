@@ -16,6 +16,15 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="<?php echo get_theme_file_uri('style.css'); ?>" />
   <title>Umi's Diary</title>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTT96294C3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-NTT96294C3');
+  </script>
   <?php wp_head(); ?>
 </head>
 
